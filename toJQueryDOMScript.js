@@ -1,6 +1,6 @@
 function toJQueryDOMScript(node) {
 	function toJQueryDOMScriptHelper(script_lines, node, var_name) {
-		script_lines.push("var " + var_name + " = $('<" + node.tagName + "/>');");
+		script_lines.push("var " + var_name + " = $('<" + node.tagName.toLowerCase() + "/>');");
 		for (var i = 0 ; i != node.attributes.length ; ++i) {
 			var attribute = node.attributes[i];
 			if (attribute.name == "class") {
